@@ -1,0 +1,148 @@
+package com.example.task;
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Scanner;
+public class task1 {
+    public static void main(String[] args) {
+
+        int a1=-1;
+        int a2=-1;
+        int a3=-1;
+        int a4=-1;
+        int a5=-1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of students");
+        int n=sc.nextInt();
+        int i = 1;
+
+
+            for (i = 1; i <= n; i++) {
+                Scanner sca = new Scanner(System.in);
+                System.out.println("");
+
+                System.out.println("*****            MENU           *****");
+                System.out.println("*                                   *");
+                System.out.println("*          1. Insert Marks          *");
+                System.out.println("*          2. Display Marks         *");
+                System.out.println("*          3. Find Average          *");
+                System.out.println("*          4. Edit marks            *");
+                System.out.println("*          5. Exit                  *");
+
+                System.out.println("");
+                System.out.println("*****     Enter your Choice:    *****");
+
+                int ch = sca.nextInt();
+
+
+                if (ch == 1) {
+                    for (int ii = 1; ii < 99; ii++) {
+
+                        System.out.println("*   1.       Input Marks            *");
+                        System.out.println("*         for the following:        *");
+
+                        System.out.println("*             Subject A             *");
+                        System.out.println("*             Subject B             *");
+                        System.out.println("*             Subject C             *");
+                        System.out.println("*             Subject D             *");
+                        System.out.println("*             Subject E             *");
+
+                        System.out.println("*    2.     Back to Home            *");
+
+                        int s = sc.nextInt();
+
+                        if (s == 1) {
+                            System.out.println("Enter Marks for Subject A");
+                            a1 = sca.nextInt();
+                            System.out.println("Enter Marks for Subject B");
+                            a2 = sca.nextInt();
+                            System.out.println("Enter Marks for Subject C");
+                            a3 = sca.nextInt();
+                            System.out.println("Enter Marks for Subject D");
+                            a4 = sca.nextInt();
+                            System.out.println("Enter Marks for Subject E");
+                            a5 = sca.nextInt();
+                            break;
+
+
+                        } else {
+                            break;
+                        }
+                    }
+
+
+                } else if (ch == 2) {
+
+                    System.out.println("***         Marks Obtained         ***");
+                    System.out.println("*                                    *");
+                    System.out.println("*           Subject 1: " + a1 + "            *");
+                    System.out.println("*           Subject 2: " + a2 + "            *");
+                    System.out.println("*           Subject 3: " + a3 + "            *");
+                    System.out.println("*           Subject 4: " + a4 + "            *");
+                    System.out.println("*           Subject 5: " + a5 + "            *");
+
+                    System.out.println("*           1. Back to Home          *");
+
+                    int b = sca.nextInt();
+                } else if (ch == 3) {
+                    int avrg = (a1 + a2 + a3 + a4 + a5) / 5;
+
+                    System.out.println("*                                    *");
+                    System.out.println("*      Average Marks Scored: " + avrg + "      *");
+                    System.out.println("*                                    *");
+                    System.out.println("*          1. Back to Home           *");
+
+                    int b = sca.nextInt();
+                } else if (ch == 4) {
+                    if (a1 == 1) {
+
+                        System.out.println("            ERROR               ");
+                        System.out.println("      No Marks Inputted         ");
+                        System.out.println(" Please use Step 1 to input Marks ");
+
+                        System.out.println("");
+                        System.out.println("1. Back to Home");
+                        int b = sca.nextInt();
+                    } else {
+                        for (int j = 1; j < 99; j++) {
+
+                            System.out.println("Updated Marks");
+                            System.out.println("");
+                            System.out.println("                Marks        ");
+                            System.out.println("*          1. Subject A: " + a1 + "          *");
+                            System.out.println("*          2. Subject B: " + a2 + "          *");
+                            System.out.println("*          3. Subject C: " + a3 + "          *");
+                            System.out.println("*          4. Subject D: " + a4 + "          *");
+                            System.out.println("*          5. Subject E: " + a5 + "          *");
+                            System.out.println("** Select the Subject to Edit Marks **");
+                            System.out.println("*          6. Back to Home           *");
+
+
+
+                            int nm = sc.nextInt();
+                            if (nm == 1) {
+                                System.out.println("Enter New Marks for Subject A");
+                                a1 = sca.nextInt();
+
+                            } else if (nm == 2) {
+                                System.out.println("Enter New Marks for Subject B");
+                                a2 = sca.nextInt();
+                            } else if (nm == 3) {
+                                System.out.println("Enter New Marks for Subject C");
+                                a3 = sca.nextInt();
+                            } else if (nm == 4) {
+                                System.out.println("Enter New Marks for Subject D");
+                                a4 = sca.nextInt();
+                            } else if (nm == 5) {
+                                System.out.println("Enter New Marks for Subject E");
+                                a5 = sca.nextInt();
+                            } else if (nm == 6) {
+                                break;
+                            }
+                        }
+                    }
+                } else if (ch == 5) {
+                    break;
+                }
+            }
+        }
+
+    }
